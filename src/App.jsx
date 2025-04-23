@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Invitation from "./components/Invitation";
+import Invitation from "./components/invitation";
 
 function App() {
   const [theme, setTheme] = useState("light");
