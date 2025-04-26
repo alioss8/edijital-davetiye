@@ -110,14 +110,14 @@ export default function EnvelopeInvite() {
                 {/* Zarf Gövdesi */}
                 <div className="absolute inset-0 bg-gray-100 shadow-lg overflow-hidden border border-gray-200">
                   {/* Çiftin Adı */}
-                  <div className="absolute bottom-4 left-0 right-0 flex items-center justify-center z-10">
-                    <CoupleNames className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-700 text-center px-4" />
+                  <div className="absolute bottom-2 left-0 right-0 flex items-center justify-center z-10">
+                    <CoupleNames className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-700 text-center px-4" />
                   </div>
               </div>
 
                 {/* Zarf Kapağı - Tek Üçgen */}
                 <motion.div 
-                  className="absolute top-0 left-0 w-full h-[60%] bg-gray-100 z-20 border border-gray-200"
+                  className="absolute top-0 left-0 w-full h-[50%] bg-gray-100 z-20 border border-gray-200"
                   style={{
                     transformOrigin: "top",
                     clipPath: "polygon(0 0, 50% 100%, 100% 0)",
@@ -195,7 +195,7 @@ export default function EnvelopeInvite() {
                 }}
               >
                 <motion.div 
-                  className="text-center space-y-3 sm:space-y-4 max-w-4xl w-full"
+                  className="text-center space-y-2 sm:space-y-3 max-w-4xl w-full"
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ 
                     y: 0,
@@ -212,41 +212,41 @@ export default function EnvelopeInvite() {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.9, duration: 0.5 }}
                   >
-                    <div className="absolute -top-6 sm:-top-8 left-1/2 transform -translate-x-1/2 w-16 sm:w-20 h-1 bg-rose-300 rounded-full" />
-                    <CoupleNames className="text-3xl sm:text-4xl md:text-5xl font-bold text-rose-600 mb-2 sm:mb-3 font-serif" />
-                    <p className="text-rose-500 italic text-xl sm:text-2xl">Düğün Davetiyesi</p>
+                    <div className="absolute -top-4 sm:-top-6 left-1/2 transform -translate-x-1/2 w-12 sm:w-16 h-1 bg-rose-300 rounded-full" />
+                    <CoupleNames className="text-2xl sm:text-3xl md:text-4xl font-bold text-rose-600 mb-1 sm:mb-2 font-serif" />
+                    <p className="text-rose-500 italic text-lg sm:text-xl">Düğün Davetiyesi</p>
                   </motion.div>
                   
                   <motion.div 
-                    className="p-4 sm:p-6 rounded-xl mt-4 sm:mt-6 mb-4 sm:mb-6 bg-gradient-to-r from-rose-50 to-purple-50 border border-rose-100"
+                    className="p-3 sm:p-4 rounded-xl mt-2 sm:mt-3 mb-2 sm:mb-3 bg-gradient-to-r from-rose-50 to-purple-50 border border-rose-100"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.1, duration: 0.5 }}
                   >
-                    <DateInfo targetDate={weddingDate} className="text-xl sm:text-2xl" />
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0 }}
+                    <DateInfo targetDate={weddingDate} className="text-lg sm:text-xl" />
+                  </motion.div>
+                  
+                  <motion.div
+                    initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.2, duration: 0.5 }}
-                    className="space-y-3 sm:space-y-4"
-                >
-                    <LocationInfo className="text-lg sm:text-xl text-gray-700" />
-                  <ThemeSwitcher />
-                </motion.div>
+                    className="space-y-2 sm:space-y-3"
+                  >
+                    <LocationInfo className="text-base sm:text-lg text-gray-700" />
+                    <ThemeSwitcher />
+                  </motion.div>
 
-                <motion.button
+                  <motion.button
                     onClick={handleClose}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.3, duration: 0.5 }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     className="mt-6 sm:mt-8 px-8 sm:px-10 py-3 sm:py-4 bg-rose-500 text-white rounded-xl shadow-lg hover:bg-rose-600 transition-colors text-lg sm:text-xl"
-                >
-                  Zarfı Kapat
-                </motion.button>
+                  >
+                    Zarfı Kapat
+                  </motion.button>
                 </motion.div>
               </motion.div>
             </motion.div>
